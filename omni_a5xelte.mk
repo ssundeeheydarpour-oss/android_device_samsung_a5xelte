@@ -1,8 +1,10 @@
 # Release name
 PRODUCT_RELEASE_NAME := a5xelte
-
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+
+# Inherit Exynos7580 common device configuration
+$(call inherit-product, device/samsung/universal7580-common/device-common.mk)
 
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/omni/config/common.mk)
